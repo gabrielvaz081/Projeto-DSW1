@@ -9,6 +9,51 @@
     <link rel="icon" href="images/favicon.ico" type="image/icon">
 </head>
 <body>
-    
+    <header>
+        <div class="icone_opcoes">
+            <img src="images/icone_opcoes.png" alt="icone_opcoes" title="icone_opcoes">
+        </div>
+        <div class="titulo_pagina">
+            <img src="images/titulo_pagina.png" alt="titulo_pagina" title="titulo_pagina">
+        </div>
+        <div class="icnone_login">
+            <a href="login.html">
+                <img src="images/icone_login.png" alt="icnone_login" title="icnone_login">
+            </a>
+        </div>
+    </header>
+    <main>
+        <form action="/login" method="post">
+            <fieldset>
+                <h1>Login</h1>
+                <ul type="none">
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <button>Login</button>
+                <button>
+                    <a href="cadastro.html">Cadastro</a>
+                </button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="logo_footer">
+            <img src="images/logo_footer.png" alt="logo_footer" title="logo_footer">
+        </div>
+        <nav>
+            <a href="contato.html">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </footer>
 </body>
 </html>
