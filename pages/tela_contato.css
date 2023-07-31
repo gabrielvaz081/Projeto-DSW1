@@ -17,6 +17,10 @@ html {
     transition-duration: 2s;
 }
 
+body {
+    background-color: var(--color2);
+}
+
 /*Estilo header*/
 
 .navbar {
