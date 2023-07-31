@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color1: #0ae4f0;
+    --color2: #2723fa;
+    --color3: #000000;
+    --color4: #f70a0a;
+}
+
+* {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    transition-duration: 2s;
+}
+
+/*Estilo header*/
+
+.navbar {
+    background-color: var(--color2);
+}
+
+.container-fluid a {
+    color: var(--color1);
+}
+
+.container-fluid button {
+    color: var(--color1);
+}
+
+.offcanvas-end {
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.offcanvas-header h5 {
+    color: var(--color1);
+}
+
+.dropdown-menu {
+    background-color: var(--color3);
+    text-align: center;
+}
+
+/*Estilo main*/
+
+.text-center {
+    background-image: url(images/tela_registro.jpg);
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#form_registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#form_registro form {
+    width: 500px;
+    border-style: dashed;
+    border-color: var(--color1);
+    border-radius: 10px;
+}
+
+form h1 {
+    color: var(--color1);
+    font-size: 50px;
+    padding: 10px;
+}
+
+label {
+    color: var(--color1);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    background-color: var(--color2);
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: var(--color1);
+    width: 400px;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+input:hover {
+    transform: scale(1.2);
+}
+
+#imagem {
+    color: var(--color1);
+    background-color: var(--color1);
+    border-radius: 10px;
+    border-color: var(--color2);
+    font-size: 20px;
+    padding: 10px;
+}
+
+input[type='file']::file-selector-button {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+input[type='file']::file-selector-button:hover {
+    color: var(--color4);
+    background-color: var(--color2);
+    border-color: var(--color4);
+}
+
+li p {
+    color: var(--color4);
+    padding: 10px;
+}
+
+fieldset button {
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    color: var(--color1);
+    background-color: var(--color2);
+    border-radius: 10px;
+    border-color: var(--color1);
+}
+
+button a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+fieldset button:hover {
+    transform: scale(1.2);
+    background-color: var(--color4);
+}
+
+/*Estilo footer*/
+
+.navbar-footer {
+    background-color: var(--color2);
+}
+
+.nav-item a {
+    color: var(--color1);
+}
+
+.nav-link:hover {
+    color: var(--color3);
+}
+
+.nav {
+    justify-content: end;
+}

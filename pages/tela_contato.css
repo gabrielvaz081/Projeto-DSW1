@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color1: #0ae4f0;
+    --color2: #2723fa;
+    --color3: #000000;
+    --color4: #f70a0a;
+}
+
+* {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    transition-duration: 2s;
+}
+
+/*Estilo header*/
+
+.navbar {
+    background-color: var(--color2);
+}
+
+.container-fluid a {
+    color: var(--color1);
+}
+
+.container-fluid button {
+    color: var(--color1);
+}
+
+.offcanvas-end {
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.offcanvas-header h5 {
+    color: var(--color1);
+}
+
+.dropdown-menu {
+    background-color: var(--color3);
+    text-align: center;
+}
+
+/*Estilo main*/
+
+.text-center {
+    background-image: url(images/imagem_contato.jpg);
+    height: 87.1vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text-center p {
+    position: absolute;
+    color: var(--color1);
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 900;
+    line-height: 1.6;
+    margin-top: 100px;
+}
+
+.text-center p:hover {
+    color: var(--color4);
+}
+
+.imagem_contato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.imagem_contato img {
+    height: 90px;
+    width: 90px;
+}
+
+.imagem_contato img:hover {
+    transform: scale(1.5);
+}
+
+.imagem_contato h1 {
+    color: var(--color1);
+    font-size: 20px;
+    padding: 50px;
+}
+
+.imagem_contato h1:hover {
+    color: var(--color4);
+}
+
+/*Estilo footer*/
+
+.navbar-footer {
+    background-color: var(--color2);
+}
+
+.nav-item a {
+    color: var(--color1);
+}
+
+.nav-link:hover {
+    color: var(--color3);
+}
+
+.nav {
+    justify-content: end;
+}

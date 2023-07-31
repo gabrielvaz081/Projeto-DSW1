@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color1: #0ae4f0;
+    --color2: #2723fa;
+    --color3: #000000;
+    --color4: #f70a0a;
+}
+
+* {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    transition-duration: 2s;
+}
+
+/*Estilo header*/
+
+.navbar {
+    background-color: var(--color2);
+}
+
+.container-fluid a {
+    color: var(--color1);
+}
+
+.container-fluid button {
+    color: var(--color1);
+}
+
+.offcanvas-end {
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.offcanvas-header h5 {
+    color: var(--color1);
+}
+
+.dropdown-menu {
+    background-color: var(--color3);
+    text-align: center;
+}
+
+/*Estilo main*/
+
+.text-center {
+    background-image: url(images/tela_selecao.jpg);
+    height: 87.1vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text-center table {
+    position: absolute;
+    width: 1480px;
+    height: 490px;
+}
+
+.imagem_objeto {
+    height: 90px;
+    width: 100px;
+}
+
+.imagem_objeto:hover {
+    transform: scale(1.3);
+}
+
+th {
+    color: var(--color1);
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.objetos p {
+    color: var(--color1);
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.objetos p:hover {
+    color: var(--color4);
+}
+
+caption {
+    color: var(--color4);
+    text-align: center;
+}
+
+/*Estilo footer*/
+
+.navbar-footer {
+    background-color: var(--color2);
+}
+
+.nav-item a {
+    color: var(--color1);
+}
+
+.nav-link:hover {
+    color: var(--color3);
+}
+
+.nav {
+    justify-content: end;
+}
