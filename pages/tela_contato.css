@@ -17,7 +17,7 @@ html {
     transition-duration: 2s;
 }
 
-body {
+main {
     background-color: var(--color2);
 }
 

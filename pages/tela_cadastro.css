@@ -17,7 +17,7 @@ html {
     transition-duration: 2s;
 }
 
-body {
+main {
     background-color: var(--color2);
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 #form_cadastro form {
-    width: 500px;
+    width: 800px;
     border-style: dashed;
     border-color: var(--color1);
     border-radius: 10px;
@@ -90,7 +90,7 @@ label {
     color: var(--color1);
     font-size: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     
 }
 
@@ -99,7 +99,7 @@ input {
     font-size: 25px;
     border-radius: 10px;
     border-color: var(--color1);
-    width: 400px;
+    width: 600px;
     cursor: pointer;
     color: var(--color1);
 }
@@ -147,12 +147,18 @@ li p {
     padding: 10px;
 }
 
+#radio {
+    display: flex;
+    justify-content: center;
+}
+
 input[type='radio'] {
     height: 20px;
+    padding: 10px;
 }
 
 fieldset button {
-    width: 400px;
+    width: 600px;
     padding: 10px;
     margin: 10px;
     font-size: 20px;
