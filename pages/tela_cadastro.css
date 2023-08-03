@@ -13,54 +13,122 @@
     padding: 0;
 }
 
-html {
-    transition-duration: 2s;
-}
-
-main {
-    background-color: var(--color2);
-}
-
 /*Estilo header*/
+a {
+    color: var(--color2);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
 
-.navbar {
-    background-color: var(--color2);
-}
-
-.container-fluid a {
+  .active {
+    color: var(--color4);
+  }
+  
+  .logo {
+    font-size: 25px;
+    letter-spacing: 4px;
     color: var(--color1);
-}
-
-.container-fluid button {
-    color: var(--color1);
-}
-
-.offcanvas-end {
-    background-color: var(--color2);
-    text-align: center;
-}
-
-.offcanvas-header h5 {
-    color: var(--color1);
-}
-
-.dropdown-menu {
-    background-color: var(--color3);
-    text-align: center;
-}
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color2);
+    height: 8vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    z-index: 9;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    color: var(--color2);
+  }
+  
+  .mobile-menu {
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--color1);
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 2700px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 20vw;
+      height: 92vh;
+      background: var(--color3);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
 
 /*Estilo main*/
 
-.text-center {
-    background-image: url(images/imagem_cadastro.jpg);
-    height: 2190px;
-    background-position: center;
-    background-repeat: no-repeat;
+main {
+    background: url(images/imagem_cadastro.jpg) no-repeat center center;
+    height: 2250px;
     background-size: cover;
-    object-fit: cover;
+    background-color: var(--color3);
 }
 
-#form_cadastro {
+#form_cadastro form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,22 +136,19 @@ main {
     padding: 50px;
 }
 
-#form_cadastro form {
-    width: 800px;
-    border-style: dashed;
-    border-color: var(--color1);
-    border-radius: 10px;
-}
-
 form h1 {
     color: var(--color1);
     font-size: 50px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 fieldset h2 {
     color: var(--color1);
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 label {
@@ -91,7 +156,14 @@ label {
     font-size: 25px;
     display: flex;
     justify-content: left;
-    
+    margin-top: 10px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
 }
 
 input {
@@ -99,13 +171,11 @@ input {
     font-size: 25px;
     border-radius: 10px;
     border-color: var(--color1);
+    height: 50px;
     width: 600px;
     cursor: pointer;
     color: var(--color1);
-}
-
-input:hover {
-    transform: scale(1.2);
+    margin-top: 10px;
 }
 
 select {
@@ -149,18 +219,18 @@ li p {
 
 #radio {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 input[type='radio'] {
-    height: 20px;
+    height: 30px;
     padding: 10px;
 }
 
 fieldset button {
     width: 600px;
     padding: 10px;
-    margin: 10px;
+    margin-top: 50px;
     font-size: 20px;
     color: var(--color1);
     background-color: var(--color2);
@@ -180,18 +250,20 @@ fieldset button:hover {
 
 /*Estilo footer*/
 
-.navbar-footer {
-    background-color: var(--color2);
+.nav-footer {
+    display: flex;
+    justify-content: right;
 }
 
-.nav-item a {
+.list-footer {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+
+.list-footer a {
     color: var(--color1);
-}
-
-.nav-link:hover {
-    color: var(--color3);
-}
-
-.nav {
-    justify-content: end;
+    padding: 10px;
 }

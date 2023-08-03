@@ -3,71 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Início</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Início</title>
     <link rel="icon" href="images/favicon.ico" type="image/icon">
     <link rel="stylesheet" href="tela_inicial.css">
+    <script src="tela_inicial.js" defer></script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="tela_inicial.html">Achados e Perdidos</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="tela_inicial.html">Página Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="tela_login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="tela_cadastro.html">Cadastro</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Opções
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="tela_registro.html">Registrar Objeto</a></li>
-                        <li><a class="dropdown-item" href="tela_selecao.html">Selecionar Objeto</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
+      <nav>
+        <a class="logo" href="tela_inicial.html">Achados e Perdidos</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="tela_inicial.html" class="active">Página Inicial</a></li>
+          <li><a href="tela_login.html">Login</a></li>
+          <li><a href="tela_cadastro.html">Cadastro</a></li>
+          <li><a href="tela_registro.html">Registrar<br>Objeto</a></li>
+          <li><a href="tela_selecao.html">Selecionar<br>Objeto</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="text-center">
-            <article id="mensagem_inicial">
-              <p>Perdeu alguma coisa?</p>
-              <p>Talvez você possa encontrá-la!</p>
-              <p>Confere aqui!</p>
-            </article>
-        </section>
+      <article id="mensagem_inicial">
+        <p>Perdeu alguma coisa?</p>
+        <p>Talvez você possa encontrá-la!</p>
+        <p>Confere aqui!</p>
+      </article>
     </main>
     <footer>
-        <nav class="navbar-footer">
-            <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="tela_contato.html">Contato</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="tela_sobre.html">Sobre</a>
-                </li>
-            </ul>
+        <nav class="nav-footer">
+          <ul class="list-footer">
+            <li>
+              <a href="tela_contato.html">Contato</a>
+            </li>
+            <li>
+              <a href="tela_sobre.html">Sobre</a>
+            </li>
+          </ul>
         </nav>
     </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </html>

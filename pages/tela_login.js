@@ -1,31 +1,98 @@
+class MobileNavbar {
+    constructor(mobileMenu, navList, navLinks) {
+      this.mobileMenu = document.querySelector(mobileMenu);
+      this.navList = document.querySelector(navList);
+      this.navLinks = document.querySelectorAll(navLinks);
+      this.activeClass = "active";
+  
+      this.handleClick = this.handleClick.bind(this);
+    }
+  
+    animateLinks() {
+      this.navLinks.forEach((link, index) => {
+        link.style.animation
+          ? (link.style.animation = "")
+          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`);
+      });
+    }
+  
+    handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass);
+      this.animateLinks();
+    }
+  
+    addClickEvent() {
+      this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+  
+    init() {
+      if (this.mobileMenu) {
+        this.addClickEvent();
+      }
+      return this;
+    }
+  }
+  
+  const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+  );
+  mobileNavbar.init();
+
 const formularioLogin = document.querySelector('#formulario_login')
-const emaillabel = document.querySelector('#label_email')
+let emailValidacao = false
+const emailLabel = document.querySelector('#label_email')
 const emailInput = document.querySelector('#email')
-const senhalabel = document.querySelector('#label_senha')
+let senhaValidacao = false
+const senhaLabel = document.querySelector('#label_senha')
 const senhaInput = document.querySelector('#senha')
+const loginButton = document.querySelector('#login')
 
-formularioLogin.addEventListener('submit', (event) => {
-
-    event.preventDefault(); //Garantir a validação antes de enviar
-
-    //Validação email
-    if(emailInput.value === '' || !validacaoEmail(emailInput.value)) {
-        alert('Por favor, preencha o campo de email.');
-        return;
+//Validação email
+emailInput.addEventListener('keyup', () => {
+    if(emailInput.value.length <=2) {
+        emailLabel.setAttribute('style', 'color: #f70a0a; font-size: 15px')
+        emailLabel.innerHTML = 'Insira pelo menos 3 caracteres'
+        emailValidacao = false
+    } else {
+        if(!validacaoEmail(emailInput.value)) {
+            emailLabel.setAttribute('style', 'color: #f70a0a; font-size: 15px')
+            emailLabel.innerHTML = 'Email inválido'
+            emailValidacao = false
+        } else {
+            emailLabel.setAttribute('style', 'color: #0ae4f0; font-size: 25px')
+            emailLabel.innerHTML = 'Email:'
+            emailValidacao = true
+        }
     }
+})
 
-    //Validação senha
-    if(senhaInput.value === '' || !senhaDigito(senhaInput.value, 8)) {
-        alert('Por favor, digite uma senha de no mínimo 8 dígitos');
-        return;
+//Validaçao senha
+senhaInput.addEventListener('keyup', () => {
+    if(senhaInput.value.length <=2) {
+        senhaLabel.setAttribute('style', 'color: #f70a0a; font-size: 15px')
+        senhaLabel.innerHTML = 'Insira pelo menos 3 caracteres'
+        senhaValidacao = false
+    } else {
+        if(!senhaDigito(senhaInput.value, 8)) {
+            senhaLabel.setAttribute('style', 'color: #f70a0a; font-size: 15px')
+            senhaLabel.innerHTML = 'Senha inválida'
+            senhaValidacao = false
+        } else {
+            senhaLabel.setAttribute('style', 'color: #0ae4f0; font-size: 25px')
+            senhaLabel.innerHTML = 'Senha:'
+            senhaValidacao = true
+        }
     }
-
-    formularioLogin.submit();
 })
 
 function validacaoEmail(email) {
 
-    const emailRegex = new RegExp(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i);
+    const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
 
     if(emailRegex.test(email)) {
         return true;
@@ -42,3 +109,19 @@ function senhaDigito(senha, numDigitos) {
 
     return false;
 }
+
+function logar() {
+    if(emailValidacao && senhaValidacao) {
+        alert('Login realizado com sucesso')
+    } else {
+        alert('Por favor, preencha todos os campos corretamente')
+    }
+
+    return window.location.href = 'tela_login.html';
+}
+
+loginButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    logar()
+})
+
